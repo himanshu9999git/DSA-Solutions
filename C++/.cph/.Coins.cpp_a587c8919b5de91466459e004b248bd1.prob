@@ -1,0 +1,1 @@
+{"name":"Local: Coins","url":"c:\\HK\\STUDY\\C++\\Coins.cpp","tests":[{"id":1644986552229,"input":"12\n2\n18\n36\n48\n20","output":"13\n2\n19\n41\n57\n21"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\HK\\STUDY\\C++\\Coins.cpp","group":"local","local":true}

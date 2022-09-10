@@ -1,0 +1,1 @@
+{"name":"Local: EverythingEverywhereAllButOne","url":"c:\\HK\\STUDY\\C++\\EverythingEverywhereAllButOne.cpp","tests":[{"id":1653500409995,"input":"4\n3\n42 42 42\n5\n1 2 3 4 5\n4\n4 3 2 1\n3\n24 2 22","output":"YES\nYES\nNO\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\HK\\STUDY\\C++\\EverythingEverywhereAllButOne.cpp","group":"local","local":true}

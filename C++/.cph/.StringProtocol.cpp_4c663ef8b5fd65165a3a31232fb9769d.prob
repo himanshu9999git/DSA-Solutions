@@ -1,0 +1,1 @@
+{"name":"Local: StringProtocol","url":"c:\\HK\\STUDY\\C++\\StringProtocol.cpp","tests":[{"id":1646838186927,"input":"2\n5\ncbcdc\n6\naabeee","output":"5\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\HK\\STUDY\\C++\\StringProtocol.cpp","group":"local","local":true}

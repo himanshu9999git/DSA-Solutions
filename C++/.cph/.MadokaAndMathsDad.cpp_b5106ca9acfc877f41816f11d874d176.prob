@@ -1,0 +1,1 @@
+{"name":"Local: MadokaAndMathsDad","url":"c:\\HK\\STUDY\\C++\\MadokaAndMathsDad.cpp","tests":[{"id":1647011750030,"input":"5\n1\n2\n3\n4\n5","output":"1\n2\n21\n121\n212"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\HK\\STUDY\\C++\\MadokaAndMathsDad.cpp","group":"local","local":true}

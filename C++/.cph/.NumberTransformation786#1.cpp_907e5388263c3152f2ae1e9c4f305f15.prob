@@ -1,0 +1,1 @@
+{"name":"Local: NumberTransformation786#1","url":"c:\\HK\\STUDY\\C++\\NumberTransformation786#1.cpp","tests":[{"id":1651502904294,"input":"3\n3 75\n100 100\n42 13","output":"2 5\n3 1\n0 0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\HK\\STUDY\\C++\\NumberTransformation786#1.cpp","group":"local","local":true}
