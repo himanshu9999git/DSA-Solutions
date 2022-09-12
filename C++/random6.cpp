@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 bool compare(string& s1, string& s2){
     if(s1.size() != s2.size() + 1) return false;
     
@@ -45,4 +48,10 @@ int longestStrChain(vector<string>& arr){
             maxi = dp[i];
     }
     return maxi;
+}
+
+int main()
+{
+    
+    return 0;
 }

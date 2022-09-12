@@ -6,28 +6,30 @@ class Node
 public:
     int data;
     Node *next;
+    Node *prev;
 };
 
-Node *InsertAtTail(Node *head, int new_data)
+Node *insertAtTail(Node *head, int new_data)
 {
     Node *new_node = new Node();
     Node *last = head;
-
+    
     new_node->data = new_data;
     new_node->next = NULL;
 
     if (head == NULL)
     {
+        new_node->prev = NULL;
         head = new_node;
         return head;
     }
 
-    while (last->next != NULL)
-    {
+    while (last->next)
         last = last->next;
-    }
 
+    new_node->prev = last;
     last->next = new_node;
+
     return head;
 }
 
@@ -42,19 +44,25 @@ void printList(Node *node)
 
 int main()
 {
-    int i, n;
+    int n;
     cin >> n;
 
     Node *head = NULL;
-
-    for (i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         int data;
         cin >> data;
-        head = InsertAtTail(head, data);
+
+        head = insertAtTail(head, data);
     }
 
-    printList(head);
+    Node *new_node = head;
+    printList(new_node);
 
+    while (head->next)
+    {
+        head = head->next;
+        cout << head->prev << endl;
+    }
     return 0;
 }
