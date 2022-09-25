@@ -3,9 +3,10 @@ using namespace std;
 
 int binarySearch(vector<int> v, int start, int end, int target)
 {
+    int mid;
     while (start <= end)
     {
-        int mid = start + (end - start) / 2;
+        mid = start + (end - start) / 2;
         if (v[mid] == target)
             return mid;
 
@@ -15,7 +16,7 @@ int binarySearch(vector<int> v, int start, int end, int target)
         else if (v[mid] > target)
             end = mid - 1;
     }
-    return -1;
+    return mid-1;
 }
 
 int main()
