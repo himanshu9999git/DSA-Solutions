@@ -4,7 +4,7 @@ using namespace std;
 static bool comp(vector<int> &a, vector<int> &b)
 {
   if (a[0] == b[0])
-    return a[1] < b[1];
+    return a[1] > b[1];
 
   return a[0] < b[0];
 }
@@ -13,7 +13,7 @@ int main()
 {
   int n;
   cin >> n;
-  vector<vector<int>> a(n, vector<int>(2, 0));
+  vector<vector<int>> a = {{7, 0}, {4, 4}, {7, 2}, {5, 0}, {6, 1}, {5, 4}, {8, 0}};
   for (int i = 0; i < n; i++)
   {
     cin >> a[i][0];

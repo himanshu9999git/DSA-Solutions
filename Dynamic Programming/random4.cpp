@@ -1,62 +1,48 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int CoinExchange(int n, int sum, int arr[])
+int LCS(string x, string y, int m, int n)
 {
-    int t[n + 1][sum + 1];
-    for (int i = 0; i < n + 1; i++)
+    int t[m + 1][n + 1];
+    for (int i = 0; i < m + 1; i++)
     {
-        for (int j = 0; j < sum + 1; j++)
+        for (int j = 0; j < n + 1; j++)
         {
-            if (j == 0)
+            if (i == 0 || j == 0)
                 t[i][j] = 0;
-
-            if (i == 0)
-                t[i][j] = INT_MAX - 1;
         }
     }
-    for (int j = 1; j < sum + 1; j++)
-    {
-        if (j % arr[0])
-            t[1][j] = INT_MAX - 1;
 
-        else
-            t[1][j] = j / arr[0];
-    }
-
-    for (int i = 2; i < n + 1; i++)
+    for (int i = 1; i < m + 1; i++)
     {
-        for (int j = 1; j < sum + 1; j++)
+        for (int j = 1; j < n + 1; j++)
         {
-            if (arr[i - 1] <= j)
-                t[i][j] = min(1 + t[i][j - arr[i - 1]], t[i - 1][j]);
+            if (x[i - 1] == y[j - 1])
+                t[i][j] = 1 + t[i - 1][j - 1];
 
             else
-                t[i][j] = t[i - 1][j];
+                t[i][j] = max(t[i - 1][j], t[i][j - 1]);
         }
     }
-    if (t[n][sum] == 2147483646)
-        return -1;
 
-    else
-        return t[n][sum];
+    return t[m][n];
 }
 
 int main()
 {
-    int n, sum;
-    cin >> n;
+    string x, y;
 
-    int arr[n];
+    cin >> x;
+    cin >> y;
 
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+    int m = x.length();
+    int n = y.length();
 
-    cin >> sum;
+    int a = LCS(x, y, m, n);
+    int p = n - a;
+    int q = m - a;
 
-    cout << CoinExchange(n, sum, arr);
+    cout << p << q << endl;
 
     return 0;
 }
