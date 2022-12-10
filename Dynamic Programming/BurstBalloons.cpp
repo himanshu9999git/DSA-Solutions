@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/burst-balloons/submissions/
+// https://leetcode.com/problems/burst-balloons/
 
 #include <bits/stdc++.h>
 using namespace std;
