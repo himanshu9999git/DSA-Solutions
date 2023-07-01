@@ -4,30 +4,36 @@ using namespace std;
 vector<int> solve(vector<int> &nums, int k)
 {
     int n = nums.size();
+    deque<int> dq;
     vector<int> v;
 
     int i = 0;
-    queue<int> q;
-
-    while (i + 1 < k)
+    while (i < k)
     {
-        while (!q.empty() && q.front() <= nums[i])
-            q.pop();
+        while (!dq.empty() && dq.front() < nums[i])
+            dq.pop_front();
 
-        q.push(nums[i]);
+        while (!dq.empty() && dq.back() < nums[i])
+            dq.pop_back();
+
+        dq.push_back(nums[i]);
         i++;
     }
+    v.push_back(dq.front());
 
     while (i < n)
     {
-        while (!q.empty() && q.front() <= nums[i])
-            q.pop();
+        if (dq.front() == nums[i - k])
+            dq.pop_front();
 
-        q.push(nums[i]);
-        v.push_back(q.front());
+        while (!dq.empty() && dq.front() < nums[i])
+            dq.pop_front();
 
-        if (q.front() == nums[i - k + 1])
-            q.pop();
+        while (!dq.empty() && dq.back() < nums[i])
+            dq.pop_back();
+
+        dq.push_back(nums[i]);
+        v.push_back(dq.front());
 
         i++;
     }
