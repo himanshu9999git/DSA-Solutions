@@ -15,7 +15,6 @@ void solve(vector<vector<int>> &v, vector<int> &a, vector<int> nums, vector<int>
         {
             a.push_back(nums[i]);
             vis[i] = 1;
-
             solve(v, a, nums, vis, n);
             vis[i] = 0;
             a.pop_back();

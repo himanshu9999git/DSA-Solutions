@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/numbers-with-same-consecutive-differences/submissions/
+// https://leetcode.com/problems/numbers-with-same-consecutive-differences
 
 #include <bits/stdc++.h>
 using namespace std;
